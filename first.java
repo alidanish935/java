@@ -1,23 +1,34 @@
+import java.util.HashMap;
+
 class first{
     public static void main(String[] args) {
-        int arr[]={1,2,3,4,7,9};
+        int arr[]={1,4,20,8,10,5};
         int n = arr.length;
-        int x = 2;
+        int sum = 32;
 
-        int l = 0,r=n-1;
-        while (l<=r) {
-            int mid = (l+r)/2;
-            if(arr[mid]==x){
-                System.out.print("x is found at : "+mid);
-                return;
+        int start = 0, end =-1,curr_sum =0;
+        HashMap<Integer,Integer> hm = new HashMap<>();
+
+        for(int i=0;i<n;i++){//0
+            curr_sum += arr[i];//1
+            if (curr_sum == sum) {
+                end = i;
             }
-            if(x<arr[mid]){
-                r=mid-1;
+            if (hm.containsKey(curr_sum-sum)) {
+                start = hm.get(curr_sum - sum)+1;
+                end = i;
             }
-            if(x>arr[mid]){
-                l=mid+1;
-            }
+            hm.put(curr_sum,i);
         }
-        System.out.println("x is not found");
+        if(end == -1){
+
+            System.out.println(sum+" is not found  ");
+        }else{
+
+            System.out.println("Sub arr found between "+start +" to "+end);
+        }
+
+        
+       
     }
 }
