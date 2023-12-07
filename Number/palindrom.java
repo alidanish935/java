@@ -6,9 +6,9 @@ public class palindrom {
         int n = 121;
         int org = n;
         int res =0;
-        while(n>0){
+        while(n>0){//121 >0
             int mod = n%10;
-            res = res*10 + mod;
+            res = res*10 + mod;//12
             n=n/10;
         }
         if(res == org){
@@ -19,3 +19,4 @@ public class palindrom {
         }
     }
 }
+
