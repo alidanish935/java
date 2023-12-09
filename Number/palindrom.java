@@ -7,7 +7,7 @@ public class palindrom {
         int org = n;
         int res =0;
         while(n>0){//121 >0
-            int mod = n%10;
+            int mod = n%10;//1
             res = res*10 + mod;//12
             n=n/10;
         }
