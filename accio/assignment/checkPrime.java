@@ -8,6 +8,7 @@ public class checkPrime {
          Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         // Your code here
+        // for prime no we should check till n/2 but sqrt of n is much better
         isPrime(n);
         for(int i=1;i<=n;i++){
             if(isPrime(i)){
