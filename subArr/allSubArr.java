@@ -7,14 +7,16 @@ public class allSubArr {
 
         for(int st=0;st<n;st++){
             for(int ed = st;ed<n;ed++){
-                System.out.print(st+""+ed);
+                // System.out.println(st+" "+ed);
+                for(int i=st;i<=ed;i++){
+                    System.out.print(a[i]+" ");
+                }
+                System.out.println();
             }
-            System.out.println();
         }
         
         // for(int st = 0; st < n; st++) {
-        //     for(int ed = st; ed < n; ed++) {
-                
+        //     for(int ed = st; ed < n; ed++) {         
         //         for(int i = st; i <= ed; i++) {
         //             System.out.print(a[i] + " ");
         //         }
