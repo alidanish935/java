@@ -227,24 +227,37 @@ public class printingPtrn {
     //   * * *
     //     *
 
-            int st = 1;
-            int sp = 5/2;
-            for(int i=1;i<=5;i++){
-                for(int j=1;j<=sp;j++){
-                    System.out.print(" ");
+            // int st = 1;
+            // int sp = 5/2;
+            // for(int i=1;i<=5;i++){
+            //     for(int j=1;j<=sp;j++){
+            //         System.out.print(" ");
+            //     }
+            //     for(int j=1;j<=st;j++){
+            //         System.out.print("*");
+            //     }
+            //     System.out.println();
+            //     if(i<=5/2){
+            //         sp = sp - 1;
+            //         st = st + 2;
+            //     }else{
+            //         sp = sp +1;
+            //         st = st - 2;
+            //     }
+            // }
+
+        for(int i=1;i<=5;i++){//4
+            for(int j=1;j<=2*i-1;j++){//  j<7   j<9
+                if(i>(5+1)/2){
+                    j=i+2*j-1;//          j=5    j=8
                 }
-                for(int j=1;j<=st;j++){
-                    System.out.print("*");
-                }
-                System.out.println();
-                if(i<=5/2){
-                    sp = sp - 1;
-                    st = st + 2;
-                }else{
-                    sp = sp +1;
-                    st = st - 2;
-                }
+                System.out.print("*");
             }
+            System.out.println();
+
+            
+        }
+
 
     }
 }
