@@ -2,7 +2,7 @@ package subArr;
 
 public class allSubArr {
     public static void main(String[] args) {
-         int a[] = {3, 5, 2, 1, 6, 4};
+         int a[] = {3, 5, 2, 4, 6, 4};
         int n = a.length;
 
         // to calculate elem from index 1 to 4
@@ -12,12 +12,12 @@ public class allSubArr {
         
         // to calculate  index of all sub array
 
-        for(int i=0;i<n;i++){
-                for(int j=i;j<n;j++){
-                        System.out.println(i+" "+j);
-                }
-                System.out.println();
-        }
+        // for(int i=0;i<n;i++){
+        //         for(int j=i;j<n;j++){
+        //                 System.out.println(i+" "+j);
+        //         }
+        //         System.out.println();
+        // }
 
         // for(int st=0;st<n;st++){
         //     for(int ed=st;ed<n;ed++){
@@ -100,5 +100,41 @@ public class allSubArr {
                 
         //     }
         // }
+
+        
+        // find all the index of sub array in array
+        // for(int i=0;i<n;i++){
+        //         for(int j=i;j<n;j++){
+        //                 System.out.println(i+ " "+ j);
+        //         }
+        //         System.out.println();
+        // }
+
+        // print all subarray elem in array
+        // for(int i=0;i<n;i++){
+        //         for(int j=i;j<n;j++){
+        //                 for(int k=i;k<=j;k++){
+        //                         System.out.print(a[k]+" ");
+        //                 }
+        //                 System.out.println();
+        //         }
+        // }
+
+// print all subarray elem whose sum is greater then middle elem
+        int mid = a[n/2];
+        for(int i=0;i<n;i++){
+                for(int j=i;j<n;j++){
+                        int sum =0;
+                        for(int k=i;k<=j;k++){
+                           sum = sum+a[k];
+                        }
+                        if(sum>mid){
+                         for(int k=i;k<=j;k++){
+                                System.out.print(a[k]+" ");
+                         }
+                         System.out.println();
+                        }
+                }
+        }
     }
 }
