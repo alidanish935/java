@@ -1,4 +1,4 @@
-package accio;
+package accio.assignment.pattern;
 
 public class charPtrn {
     public static void main(String[] args) {

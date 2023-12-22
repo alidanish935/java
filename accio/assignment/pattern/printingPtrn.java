@@ -1,4 +1,4 @@
-package accio;
+package accio.assignment.pattern;
 
 import java.util.Scanner;
 import java.util.regex.Pattern;

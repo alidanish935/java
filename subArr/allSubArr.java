@@ -59,6 +59,18 @@ public class allSubArr {
         //     }
            
         // }
+        
+        int max = Integer.MIN_VALUE;
+        for(int i=0;i<n;i++){
+                int sum =0;
+           for(int j=i;j<n;j++){
+                sum = sum +a[j];
+                if(sum>max){
+                  max = sum;
+                }
+           }
+        }
+        System.out.println(max);
 
         
 // 3 5
@@ -121,20 +133,20 @@ public class allSubArr {
         // }
 
 // print all subarray elem whose sum is greater then middle elem
-        int mid = a[n/2];
-        for(int i=0;i<n;i++){
-                for(int j=i;j<n;j++){
-                        int sum =0;
-                        for(int k=i;k<=j;k++){
-                           sum = sum+a[k];
-                        }
-                        if(sum>mid){
-                         for(int k=i;k<=j;k++){
-                                System.out.print(a[k]+" ");
-                         }
-                         System.out.println();
-                        }
-                }
-        }
+        // int mid = a[n/2];
+        // for(int i=0;i<n;i++){
+        //         for(int j=i;j<n;j++){
+        //                 int sum =0;
+        //                 for(int k=i;k<=j;k++){
+        //                    sum = sum+a[k];
+        //                 }
+        //                 if(sum>mid){
+        //                  for(int k=i;k<=j;k++){
+        //                         System.out.print(a[k]+" ");
+        //                  }
+        //                  System.out.println();
+        //                 }
+        //         }
+        // }
     }
 }

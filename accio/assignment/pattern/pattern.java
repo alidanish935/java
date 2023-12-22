@@ -1,4 +1,4 @@
-package accio.assignment;
+package accio.assignment.pattern;
 
 public class pattern {
     public static void main(String[] args) {
