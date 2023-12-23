@@ -4,17 +4,18 @@ import java.util.Arrays;
 
 public class arrayAdding {
     public static void main(String[] args) {
-        int n =2,m=4;
-        int a[]={2,1};
-        int b[]={1,2,3,4}; // output = 1,2,5,5
+    //     int n =2,m=4;
+    //     int a[]={2,1};
+    //     int b[]={1,2,3,4}; // output = 1,2,5,5
 
       
 
-        int len = Math.max(n,m);
-      int arr[]=new int[len+1];
-      int sum=0;
-    int carry = 0;
-      int j=n-1,k=m-1;// j=1 , k=3
+    //     int len = Math.max(n,m);
+    //   int arr[]=new int[len+1];
+    //   int sum=0;
+    // int carry = 0;
+    //   int j=n-1,k=m-1;// j=1 , k=3
+
     //   for(int i=0;i<len;i++){//   0<2   0<4 
     //       if(i<n && i<m){//3  
     //           sum = a[j]+b[k]+carry;
@@ -110,5 +111,50 @@ public class arrayAdding {
     //   }
 
     //   return res;
+
+
+
+
+
+        int n =2,m=4;
+        int a[]={5,6,2,1}, b[]={3,2,3,4}; // output = 1,2,5,5
+
+        int len = Math.max(n,m);
+      int arr[]=new int[len+1], sum=0, carry = 0;
+      int j=n-1,k=m-1, r=len;// j=1 , k=3
+
+      for(int i=0;i<len;i++){
+        if(i<n && i<m){
+            sum=a[j]+b[k]+carry;
+            arr[r]=sum%10;
+            carry=sum/10;
+            k--;
+            j--;
+            r--;
+        }
+        else if(i<=m){
+            arr[r]=b[k];
+            r--;
+            k--;
+        }
+        else if(j<=n){
+            arr[r]=a[j];
+            r--;
+            j--;
+        }
+      }
+      System.out.println(Arrays.toString(arr));
+      if(carry>0){
+        arr[len]=carry;
+      }
+      int arr2[]=new int[len];
+      if(carry==0){
+        for(int i=1;i<len;i++){
+            arr2[i-1]=arr[i];
+            System.out.print(arr2[i]+" ");
+        }
+        return;
+      }
+      System.out.println(Arrays.toString(arr));
     }
 }
