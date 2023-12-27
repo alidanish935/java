@@ -1,6 +1,7 @@
 package accio.assignment.pattern;
 
 public class diamondPtrn {
+    // https://course.acciojob.com/idle?question=0de1afcc-ea73-4957-900a-da6db5fee0ed
      //    *        2
     //   * * *      1
     // * * * * *    0

@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class arrayAdding {
     public static void main(String[] args) {
+
+      // lecture 19 december2023
     //     int n =2,m=4;
     //     int a[]={2,1};
     //     int b[]={1,2,3,4}; // output = 1,2,5,5
