@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class arrayAdding {
     public static void main(String[] args) {
+      // link ->   https://course.acciojob.com/idle?question=281f855c-1a46-4dfb-9239-79478b2c24ea
 
       // lecture 19 december2023
     //     int n =2,m=4;
