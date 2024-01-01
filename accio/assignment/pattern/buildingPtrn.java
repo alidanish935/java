@@ -2,6 +2,7 @@ package accio.assignment.pattern;
 
 public class buildingPtrn {
    public static void main(String[] args) {
+    // link -> https://course.acciojob.com/idle?question=cdcb9e4d-fa09-4b0c-9e8e-2c23a7cf92ac
      int arr[]={9,3,7,6,2,0,4};
      int n = arr.length;
      int max = Integer.MAX_VALUE;
