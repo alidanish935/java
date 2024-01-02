@@ -8,12 +8,15 @@ public class contains {
         String k = "an";
         // implimentation
         boolean b =false;
+        
         for(int i=0;i<n;i++){
             String sub ="";
             for(int j=i;j<n;j++){
-                sub = sub+str.charAt(j);
+                sub = sub +str.charAt(j);
                 if(sub.equals(k)){
-                    b=true;break;
+                 b=true;
+                 break;
+                // System.out.println(sub);
                 }
             }
             if(b) break;

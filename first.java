@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashMap;
 
 class first{
@@ -28,11 +29,20 @@ class first{
         //     System.out.println("Sub arr found between "+start +" to "+end);
         // }
 
-        double a =20,b=3;
-        double c = a/b;
-        System.out.println(c);
-        // double a = 6.3;
-        System.out.println(Math.ceil(a));
+        // double a =20,b=3;
+        // double c = a/b;
+        // System.out.println(c);
+        // // double a = 6.3;
+        // System.out.println(Math.ceil(a));
+        String s = "my name is danish";
+        String[] arr=s.split(" ");
+        // char arr[]=new char[s.length()];
+        // for(int i=0;i<s.length();i++){
+        //     String str = "";
+        //     arr[i]=s.charAt(i);
+        //     System.out.print(arr[i]);
+        // }
+        System.out.println(Arrays.toString(s.split(" ")));
        
     }
 }
