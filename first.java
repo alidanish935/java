@@ -62,24 +62,63 @@ class first{
 
 
         // Binary search
-        int arr[]={2,3,4,5,6,7,8,9};// array must be sorted for binary search
-        int n = arr.length;int k = 3;
+        // int arr[]={2,3,4,5,6,7,8,9};// array must be sorted for binary search
+        // int n = arr.length;int k = 3;
          
-        int st =0;int ed = n-1;
-        while(st<=ed){
-            int mid = (st+ed)/2;
+        // int st =0;int ed = n-1;
+        // while(st<=ed){
+        //     int mid = (st+ed)/2;
             
-            if(k == arr[mid]){
-                System.out.println("key found at "+mid);
-                return;
+        //     if(k == arr[mid]){
+        //         System.out.println("key found at "+mid);
+        //         return;
+        //     }
+        //     if(k<arr[mid]){
+        //         ed = mid-1;
+        //     }
+        //     if(k>arr[mid]){
+        //         st = mid+1;
+        //     }
+        // }
+
+        int a[]={9,2};int n = a.length;
+        int b[]={4,2};int m = b.length;
+        int r = Math.max(n, m);
+        
+        int ans[]=new int[r+1];int s=ans.length;
+        int p = n-1,q=m-1,k=s-1;
+        
+        int c=0;
+        for(int i=0;i<r;i++){
+            if(p>=0 && q>=0){
+                int sum = a[p]+b[q]+c;
+                ans[k]=sum%10;
+                c= sum/10;
+                p--;q--;k--;
             }
-            if(k<arr[mid]){
-                ed = mid-1;
+            else if(p>=0){
+                ans[k]=a[p]+c;k--;p--;
             }
-            if(k>arr[mid]){
-                st = mid+1;
+            else if(q>=0){
+                ans[k]=b[q]+c;k--;q--;
             }
         }
-       
+        int ans2[]=new int[r];
+        if(c==0){
+            int l=0;
+            for(int i=1;i<=r;i++){
+                // ans2[l]=ans[i];l++;
+                System.out.print(ans[i]+" ");
+            }
+            // return;
+        }
+        else if(c>0){
+            ans[0]=c;
+            for(int i=0;i<r+1;i++){
+
+           System.out.print(ans[i]+" ");
+        }
+        }
+       // ABCD 
     }
 }
