@@ -6,6 +6,17 @@ public class pyramid {
     //   * * *        2
 //     * * * * *      1
 //   * * * * * * *
+
+
+
+
+
+
+
+
+
+
+
         // for(int i=1;i<=4;i++){
         //     for(int k=1;k<=4-i;k++){
         //         System.out.print("  ");
