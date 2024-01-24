@@ -20,4 +20,6 @@ public class evenFibnocci {
         memo[(int)n] =(fib(n-1)+fib(n-2))%mod;
         return memo[(int)n];
     }
+    
 }
+
