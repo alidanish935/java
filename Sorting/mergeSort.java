@@ -14,13 +14,11 @@ public class mergeSort {
         int mid = (l+h)/2;//4
         sort(a,l,mid);//0 4  , 0 2 ,0 1 ,0 0 , 3 3
         sort(a,mid+1,h);// 0 1, 1 2, 2 4,3 4 , 
-        merge(a,l,mid,h);// 0 0 1, 0 1 2 ,3 3 4 ,
-        
+        merge(a,l,mid,h);// 0 0 1, 0 1 2 ,3 3 4 ,   
     }
     public static void merge(int a[],int l,int mid,int h){
         int n1 = mid-l+1;int n2 = h-mid;
-        int left[]=new int[n1];
-        int right[]=new int[n2];
+        int left[]=new int[n1];   int right[]=new int[n2];
         for(int i=0;i<n1;i++){
             left[i]=a[i+l];
         }
@@ -31,9 +29,8 @@ public class mergeSort {
         while(i<n1 && j<n2){
             if(left[i]<=right[j]){
                 a[k]=left[i];i++;
-            }else{
+            }else
                 a[k]=right[j];j++;
-            }
             k++;
         }
         while(i<n1){

@@ -11,12 +11,11 @@ public class selectionSort {
                                 //           i
        
         for(int st =0;st<n;st++){
-            int min = Integer.MAX_VALUE;
+            // int min = Integer.MAX_VALUE;
             int midx =st;
 
             for(int i=st;i<n;i++){
-                if(arr[i]<min){
-                    min =arr[i];
+                if(arr[i]<arr[midx]){
                     midx = i;
                 }
             }
@@ -27,19 +26,19 @@ public class selectionSort {
 
         // Descending Order
         
-    for(int st = 0;st<n;st++){
-        int mx = Integer.MIN_VALUE;
-        int mxIdx= st;
-        for(int i=st;i<n;i++){
-            if(arr[i]>mx){
-                mx=arr[i];
-                mxIdx=i;
-            }
-        }
-        int t = arr[st];
-        arr[st]=arr[mxIdx];
-        arr[mxIdx]=t;
-    }
+    // for(int st = 0;st<n;st++){
+    //     int mx = Integer.MIN_VALUE;
+    //     int mxIdx= st;
+    //     for(int i=st;i<n;i++){
+    //         if(arr[i]>mx){
+    //             mx=arr[i];
+    //             mxIdx=i;
+    //         }
+    //     }
+    //     int t = arr[st];
+    //     arr[st]=arr[mxIdx];
+    //     arr[mxIdx]=t;
+    // }
         // for(int st=0;st<n;st++){
         //     int min = Integer.MAX_VALUE;
         //     int midx = -1;

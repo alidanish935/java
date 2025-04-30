@@ -14,65 +14,65 @@ public class maximaMinima {
 
         // 1st approach n^2 time complexity
 
-        int sr[]=new int[n];
-        int lc[]=new int[m];
-        for(int r=0;r<n;r++){
-            int mn = arr[r][0];
-            for(int c=0;c<m;c++){
-                if(mn>arr[r][c]){
-                    mn = arr[r][c];
-                }
-            }
-            System.out.print(mn+"  ");
-            sr[r]=mn;
-        }
-        for(int c=0;c<m;c++){
-            int mx=arr[0][c];
-            for(int r=0;r<n;r++){
-                if(mx<arr[r][c]){
-                    mx=arr[r][c];
-                }
-            }
-            lc[c]=mx;
-            System.out.print(mx+"  ");
-        }
-        System.out.println(Arrays.toString(lc));
-        System.out.println(Arrays.toString(sr));
+        // int sr[]=new int[n];
+        // int lc[]=new int[m];
+        // for(int r=0;r<n;r++){
+        //     int mn = arr[r][0];
+        //     for(int c=0;c<m;c++){
+        //         if(mn>arr[r][c]){
+        //             mn = arr[r][c];
+        //         }
+        //     }
+        //     System.out.print(mn+"  ");
+        //     sr[r]=mn;
+        // }
+        // for(int c=0;c<m;c++){
+        //     int mx=arr[0][c];
+        //     for(int r=0;r<n;r++){
+        //         if(mx<arr[r][c]){
+        //             mx=arr[r][c];
+        //         }
+        //     }
+        //     lc[c]=mx;
+        //     System.out.print(mx+"  ");
+        // }
+        // System.out.println(Arrays.toString(lc));
+        // System.out.println(Arrays.toString(sr));
 
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                if(sr[i]==lc[j]){
-                    System.out.println(sr[i]);
-                    return;
-                }
-            }
-        }
-        System.out.println("not exist");
-
-
-    // another approach n^3 time 
         // for(int i=0;i<n;i++){
-        //     for(int j=0;j<m;j++){
-        //         boolean flag = true;
-        //         for(int c=0;c<m;c++){
-        //             if(arr[i][j]>arr[i][c]){
-        //                 flag = false;
-        //                 break;
-        //             }
-        //         }
-
-        //         for(int r=0;r<m;r++){
-        //             if(arr[r][j]>arr[i][j]){
-        //                 flag = false;
-        //                 break;
-        //             }
-        //         }
-        //         if(flag){
-        //             System.out.print(arr[i][j]);
+        //     for(int j=0;j<n;j++){
+        //         if(sr[i]==lc[j]){
+        //             System.out.println(sr[i]);
         //             return;
         //         }
         //     }
         // }
-        // System.out.print(-1);
+        // System.out.println("not exist");
+
+
+    // another approach n^3 time 
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                boolean flag = true;
+                for(int c=0;c<m;c++){
+                    if(arr[i][j]>arr[i][c]){
+                        flag = false;
+                        break;
+                    }
+                }
+
+                for(int r=0;r<m;r++){
+                    if(arr[r][j]>arr[i][j]){
+                        flag = false;
+                        break;
+                    }
+                }
+                if(flag){
+                    System.out.print(arr[i][j]);
+                    return;
+                }
+            }
+        }
+        System.out.print(-1);
     }
 }

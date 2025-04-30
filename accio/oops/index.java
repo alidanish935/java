@@ -1,6 +1,6 @@
 package accio.oops;
-// notes link -> 23jan ->https://www.onlinegdb.com/jkoPYW0aO
-                //24jan24 ->https://www.onlinegdb.com/LbYXe6e-5
+// notes link ->   23jan ->https://www.onlinegdb.com/jkoPYW0aO
+                // 24jan24 ->https://www.onlinegdb.com/LbYXe6e-5
 public class index {
     public static class Product{
         int pid;

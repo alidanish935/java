@@ -1,0 +1,11 @@
+Design Patterns are the well proved solution of commonly occuring problems in software Design
+
+Singleton design Pattern - is used when we want to create only one object of a class during the entire programme like in 
+ db connection and logger etc we need only one instance of a class
+
+ In singleton 
+ The constructor is private so no one can create the object directly.
+ A static method is used to give the object.
+ The object is created only once and then reused.
+
+ example - suppose u are the CEO in a company, everyone talks to the same ceo, and we do not create new ceo each time
