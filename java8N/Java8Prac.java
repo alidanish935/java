@@ -5,7 +5,11 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.OptionalInt;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
+
+// refrence video --   https://www.youtube.com/watch?v=q1JQvIS6vto&t=882s
 public class Java8Prac {
 
 	public static void main(String[] args) {
@@ -40,6 +44,7 @@ public class Java8Prac {
 		
 		// custom sorting or sorting in descending order, so will go with comparator
 		// comparator is a functional interface that has only method compare
+		// comparator contains two argument
 		// compare(obj1, obj2)
 		 	// return -ve; if obj1 has come before obj2 , means both obj wont change their position
 			// return +ve; if obj1 has come after obj2 , means both obj will change their position, obj2 will come before obj1
@@ -47,6 +52,13 @@ public class Java8Prac {
 		
 		//for descending order :
 			//(a, b) -> (a < b) ? 1 : (a > b) ? -1 : 0
+			// if (a < b) but we want to sort in desc, so swap req , hence 1
+			// if (a > b) means already sorted in desc, no so swap req , hence -1
+			//
+
+
+			////for ascending order :
+			//(a, b) -> (a > b) ? 1 : (a < b) ? -1 : 0
 			
 //		List<Integer>desc = marks.stream().sorted((a,b) -> (a<b) ?1 :(a>b) ? -1 : 0).toList();
 //		List<Integer>desc1 = marks.stream().sorted((a,b)-> b.compareTo(a)).toList();
@@ -76,16 +88,53 @@ public class Java8Prac {
 		List<String> sortedString = names.stream().sorted().toList();
 		System.out.println(sortedString);
 		
+// -------------------------------------------------------------------------
+		// Having issues in this
 		// Find the second largest number in Array   1,10,12,34,35   ,  n=5
-		int arr[] =   {12, 35, 1, 10, 34, 1}; //{5,2,7,2,9,9,8,7,3,6};
-		OptionalInt secLar =  Arrays.stream(arr).distinct().sorted().skip(arr.length -6).findFirst();
-		if(secLar.isPresent()) {
-			System.out.println(secLar);
-		}else {
-			System.out.println("NOt");
+		// int arr[] =   {12, 35, 1, 10, 34, 1}; //{5,2,7,2,9,9,8,7,3,6};
+		// OptionalInt secLar =  Arrays.stream(arr).distinct().sorted().skip(arr.length -6).findFirst();
+		// if(secLar.isPresent()) {
+		// 	System.out.println(secLar);
+		// }else {
+		// 	System.out.println("NOt");
 			
-		}
+		// }
+
+//--------------------------------------------------------------------------
+
+		// Find the second largest number in Array   1,10,12,34,35   ,  n=5
+        int arr[] = {1,10,12,34,35};
+        OptionalInt sec = Arrays.stream(arr).distinct().boxed()
+                        .sorted(Comparator.reverseOrder())
+                        .skip(1).mapToInt(Integer::intValue)
+                        .findFirst();
+        System.out.println(sec.getAsInt());
+
+// .boxed(); ->Converts a primitive stream like IntStream to a stream of objects,
+// specifically Stream<Integer>.
+
+// Why? Because many operations (like using Comparator) require object types, 
+//not primitives.
+
+//Example
+IntStream intStream = IntStream.of(1, 2, 3);
+Stream<Integer> boxedStream = intStream.boxed();  // Now we can use Comparator, collect, etc.
+
+
+
+
+// ✅ .mapToInt(Integer::intValue)
+// Does the opposite of .boxed(). It converts Stream<Integer> (objects) back to 
+//IntStream (primitives).
+
+// This is useful when you want to perform number-based operations like sum(), 
+//average(), min(), etc.
+
+// Example:
 		
+List<Integer> list = Arrays.asList(1, 2, 3);
+IntStream intStrem = list.stream().mapToInt(Integer::intValue);  // Converts to IntStream
+
 	}
 
 }

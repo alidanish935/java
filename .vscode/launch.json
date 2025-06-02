@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Palindom2",
+            "request": "launch",
+            "mainClass": "LinkList.Palindom2",
+            "projectName": "java_72e8cc1b"
+        },
+        {
+            "type": "java",
+            "name": "Interview",
+            "request": "launch",
+            "mainClass": "java8N.Interview",
+            "projectName": "java_72e8cc1b"
+        },
+        {
+            "type": "java",
+            "name": "StringPrac",
+            "request": "launch",
+            "mainClass": "java8N.practice.StringPrac",
+            "projectName": "java_72e8cc1b"
+        },
+        {
+            "type": "java",
+            "name": "Practice3",
+            "request": "launch",
+            "mainClass": "java8N.Practice3",
+            "projectName": "java_72e8cc1b"
+        },
+        {
+            "type": "java",
+            "name": "Practice2",
+            "request": "launch",
+            "mainClass": "java8N.Practice2",
+            "projectName": "java_72e8cc1b"
+        },
+        {
+            "type": "java",
+            "name": "Practice",
+            "request": "launch",
+            "mainClass": "java8N.Practice",
+            "projectName": "java_72e8cc1b"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "DesignPattern.singleton.Main",
