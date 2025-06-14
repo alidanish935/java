@@ -50,7 +50,7 @@ public class InfosysPrac {
         //merge 2 list
         List<Integer>merge= Stream.concat(marks.stream(),list.stream()).sorted()
         .collect(Collectors.toList());
-        System.out.println(merge);
+        // System.out.println(merge);
 
         //freq of each num
         Map<Integer,Long>freq = list.stream().collect(Collectors.groupingBy(
@@ -58,7 +58,7 @@ public class InfosysPrac {
             Collectors.counting()
         ));
 
-        System.out.println(freq);
+        // System.out.println(freq);
 
 
         List<String>str = Arrays.asList("apple", "ball", "cat", "dog", "egg");

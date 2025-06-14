@@ -1,0 +1,104 @@
+
+
+
+//Selection sort  --   {7,8,3,1,2};
+
+1. firstly will select 7(its index) as min , now will iterate over the array and 
+will find min i.e 1 at index 3
+Now will swap 7 with 1 so arr will be {1,8,3,7,2};
+
+2. Now will consider 8(its index) as min, again will find minimum i.e 2 at index 4
+So will swap 8 with 2 so arr will be {1,2,3,7,8};
+
+3. Now will consider 3(its index) as min, again will find minimum but 3 is only min left
+So will swap 3 with 3 so no change in arr {1,2,3,7,8};
+
+4. Now will consider 7(its index) as min, again will find minimum but 7 is only min left
+So will swap 7 with 7 so no change in arr {1,2,3,7,8};
+
+
+
+
+//  Insertion sort ----   {7,8,3,1,2};
+1. We will divide the array into two parts sorted and unsorted
+2. let 7 is sorted now will compare 7 with right elm & will check 
+   is smaller but in case of 8>7 so no changes
+
+3.Now will consider 7,8 as sorted so will compare 8 with 3 but 3<8 so shifting is required
+ so all elm greater then 3 in left will shift to its pos+1
+ hence   { _, 7,8,1,2} ->   {3,7,8,1,2};
+
+4.Again 1<8, 1<7 , 1<3 so { _, 3,7,8,2} ->   {1,3,7,8,2};
+
+5.Again 2<8, 2<7 , 2<3, so { 1,_, 3,7,8} ->   {1,2,3,7,8};
+5.
+
+
+
+// Quick Sort {12,3,5,9,11,4,6,5,8};
+
+1. we will first take piv as arr[h] i.e..  8, will compare piv(8)with arr[0](12)
+  if(piv>arr[0]) but here not so no change now i=1, will check piv>arr[1]=> 8>3
+  so will swap arr[si](12) with arr[1](3) arr will become {3,12,5,9,11,4,6,5,8}
+  Now i=2 & si =1, will check piv>arr[i](5), so will again swap arr[si](12) with arr[i](5)
+  arr will become {3,5,12,9,11,4,6,5,8}
+  Now i=3 & si =2 -> as piv(8) is not greater then arr[i](9) so no change
+  Now i=4 & si =2 -> as piv is not greater then arr[i](11) so no change
+  Now i=5 & si =2 -> as piv>arr[i](4) so arr - {3,5,4,9,11,12,6,5,8}
+  Now i=6 & si =3 -> as piv>arr[i](6) so arr - {3,5,4,6,11,12,9,5,8}
+  Now i=7 & si =4 -> as piv>arr[i](5) so arr - {3,5,4,6,5,12,9,11,8}
+  After these si will be 5, as si++ will execute at last
+  All elm are swapped, now we need to swap piv with arr[si] bcz si is the best 
+  place for piv 
+  so  {3,5,4,6,5,12,9,11,8} ->{3,5,4,6,5,8,9,11,12}
+  Now here we can see, All elm<piv(8) comes toward left and elm>8 towars right
+  Hence 8 come in its correct sorted position
+
+  Now same process will repeat with recursion until every elm is not sorted
+  i.e... for {3,5,4,6,5} and {9,11,12}
+  for 1st one when we take 5 as piv all elm less then 5 will come left and 
+  greater will come right so it will be {3,4,5,5,6}
+
+  same process will continue until every elm is not at its correct pos
+  [3, 4, 5, 5, 6, 11, 12, 8, 9]
+
+
+
+// Merge Sort {12,3,5,9,11,4,6,5,8};
+we will divide the complete array until it becomes of len1
+    {12  ,  3  ,  5  ,  9  , 11  ,  4  ,  6  ,  5  , 8 }
+    
+    {12  ,  3 ,  5 ,  9 ,  11} |  {4  ,  6  ,  5 , 8}
+
+    {12 , 3 , 5}  {9 , 11} |  {4 , 6}  {5 , 8}
+
+    {12 , 3}  {5}  {9}  {11} |  {4}  {6}  {5}  {8}
+
+    {12}  {3}  {5}  {9}  {11}   {4}  {6}  {5}  {8}
+
+//logic for conquer
+we need to create two array left and right of length n1 & n2, where
+n1=mid -si +1  and n2 = ei - mid , suppose we have array {12,3,5,9,11,4,6,5,8}
+as it needed to store in two array 
+so n1 = mid -si +1 i.e.. {12,3,5,9,11}// always keep in mind to calculate n1 & n2
+and n2 = ei -mid i.e..   {4,6,5,8}
+
+kept an idx = 0 as left and right both are empty initially we need to store
+{12,3,5,9,11,_,_,_,_} only until mid
+so
+ for(int i=si;i<=mid;i++){
+    left[idx]=arr[i];idx++
+ }
+ Now left[] will bcm {12,3,5,9,11}// but left will store in sorted manner i store
+ // in unsorted manner to visualize only idx and i
+
+ We need to store {_,_,_,_ ,_,4,6,5,8} i.e.. mid+1 to ei
+ idx=0
+ for(int i=mid+1;i<=ei;i++){
+    right[idx]=arr[i];idx++
+ }
+
+ // Now merge two sorted array
+ suppose we have left[]={3,5,9,11,12} and right[]={4,5,6,8}
+ Now we need to merge them in sorted manner
+ arr[]={3,4,5,5,6,8,9,11,12}
