@@ -19,17 +19,17 @@ public class LinkedList {
         list.head=n1;
         n1.next=n2;
         n2.next=n3;
-       // print(n1);
+       print(n1);
         System.out.println();
       //  insertAtBegining(4);
         insertAtEnd(5);
         Node mid = findMid();
-        System.out.println(mid.val);
+        // System.out.println(mid.val);
         insertAtMid(9);
-        print(head);
-        System.out.println();
+        // print(head);
+        // System.out.println();
         reverse();
-        print(head);
+        // print(head);
 
         
     }//1 2 3 5 6 7

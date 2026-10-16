@@ -1,5 +1,7 @@
 package arraylist;
 
+import java.util.Arrays;
+
 public class Implement {
 
     static class ArrayList{
@@ -10,6 +12,10 @@ public class Implement {
             arr = new int[10];
         }
 
+        @Override 
+        public String toString(){
+            return Arrays.toString(arr);
+        }
         void add(int x){
             if(size>=arr.length){
                 resize();
@@ -38,15 +44,16 @@ public class Implement {
         list.add(0);
         list.add(1);
         list.add(2);
-        list.add(2);
-        list.add(2);
-        list.add(2);
-        list.add(2);
+        list.add(3);
+        list.add(5);
+        list.add(7);
+        list.add(4);
         list.add(2);
         list.add(2);
         list.add(2);
         list.add(2);
         
-        System.out.println(list.get(2));
+        System.out.println(list.get(4));
+        System.out.println(list);
     }
 }

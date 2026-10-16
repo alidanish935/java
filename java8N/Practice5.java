@@ -2,11 +2,24 @@ package java8N;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Practice5 {
     public static void main(String[] args) {
         List<String>words = Arrays.asList("apple", "ball", "cat", "dog", "egg");
-        
+        Map<String,Integer> freqMap = words.stream().collect(Collectors.toMap(
+            word -> word,
+            word -> word.length()
+        ));
+        System.out.println(freqMap);
+
+        List<Integer>list = Arrays.asList(2,5,3,7,9,5,3,7,9,54,6,3,7,5,4,3,2,4);
+        Map<Integer, Long> map = list.stream().collect(Collectors.groupingBy(
+            num->num,
+            Collectors.counting()
+        ));
+        System.out.println(map);
     }
 }
 /*

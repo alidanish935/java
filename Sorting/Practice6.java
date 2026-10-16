@@ -31,7 +31,7 @@ public class Practice6 {
     // }
 
 
-    // Insertion Sort
+    // Insertion Sort    {7,8,3,1,2};
     // for(int i=0;i<n;i++){
     //     int elm = arr[i];
     //     int j=i;
@@ -41,7 +41,9 @@ public class Practice6 {
     //     }
     //     arr[j]=elm;
     // }
-    
+    // Best Case: The best-case scenario for an insertion sort is when the input list is already sorted. 
+    //In this case, the inner loop won’t be executed, resulting in a time complexity of n
+
     
     //Quick sort
 

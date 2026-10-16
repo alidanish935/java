@@ -1,5 +1,5 @@
 
-package DesignPattern.singleton;
+package corejava.DesignPattern.singleton;
 
 public class Samosa{
 

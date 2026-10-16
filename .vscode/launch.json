@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Implement",
+            "request": "launch",
+            "mainClass": "arraylist.Implement",
+            "projectName": "java_72e8cc1b"
+        },
+        {
+            "type": "java",
+            "name": "LinkedList3",
+            "request": "launch",
+            "mainClass": "LinkList.LinkedList3",
+            "projectName": "java_72e8cc1b"
+        },
+        {
+            "type": "java",
+            "name": "LinkedList2",
+            "request": "launch",
+            "mainClass": "LinkList.LinkedList2",
+            "projectName": "java_72e8cc1b"
+        },
+        {
+            "type": "java",
+            "name": "Implement2",
+            "request": "launch",
+            "mainClass": "arraylist.Implement2",
+            "projectName": "java_72e8cc1b"
+        },
+        {
+            "type": "java",
             "name": "Palindom2",
             "request": "launch",
             "mainClass": "LinkList.Palindom2",
