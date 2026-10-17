@@ -1,1 +1,1 @@
-Memory Management
+Memory Management means allocating memory when need and reclaiming memory when it is no longer needed
